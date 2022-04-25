@@ -1,0 +1,22 @@
+#Miscellaneous useful conda commands
+
+conda create -n pymc_env -c conda-forge python libpython mkl-service numba python-graphviz scipy arviz
+conda activate pymc_env
+pip install pymc3
+pip install seaborn
+pip install sklearn
+pip install jupyter
+
+conda env export > environment.yml
+
+conda env create -f environment.yml
+
+conda info --envs
+
+conda env remove -n bayesian_thinking
+
+
+conda create -n bayesian_intro_r -c r r-recommended r-irkernel
+conda activate bayesian_intro_r
+conda install jupyter
+conda install -c conda-forge r-dplyr
